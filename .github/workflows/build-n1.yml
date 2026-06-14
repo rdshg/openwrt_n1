@@ -14,7 +14,7 @@ jobs:
     - name: 核心打包步骤
       uses: ophub/flippy-openwrt-actions@main
       env:
-        # [更换基础包] 改用经过验证的、免墙且不限流的国内大雕 LEDE 每日构建 rootfs 归档直链
+        # [彻底解决报错] 直接借用打包作者在 GitHub Release 中托管的官方标准全功能 Rootfs 包
         OPENWRT_ARMSR: https://github.com
         
         # [精准定制] 仅打包斐讯 N1 对应的晶晨芯片架构
@@ -23,7 +23,7 @@ jobs:
         # [精准定制] 强行指定打包出来的固件默认后台 IP 为 192.168.2.8
         OPENWRT_IP: 192.168.2.8
         
-        # 使用 Flippy 推荐的最稳定的 6.12.y LTS 内核系列
+        # 使用 Flippy 推荐的最稳定的 6.12.y 内核系列
         KERNEL_VERSION_NAME: 6.12.y
         KERNEL_AUTO_LATEST: true
         GZIP_IMGS: .img.gz
