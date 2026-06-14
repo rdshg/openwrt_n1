@@ -16,7 +16,7 @@ jobs:
       uses: ophub/flippy-openwrt-actions@main
       env:
         # [100%真实有效直链] 官方标准 ARMv8 基础 rootfs 包，完美内置 PassWall
-        OPENWRT_ARMSR: https://github.com/ophub/flippy-openwrt-actions/releases/download/OpenWrt_armv8_save_2026.06/openwrt_h6_vplus_R26.03.25_k6.12.91-flippy-95+o.img.gz
+        OPENWRT_ARMSR: https://github.com/ophub/flippy-openwrt-actions/releases/download/OpenWrt_armv8_save_2026.06/openwrt-armsr-armv8-generic-rootfs.tar.gz
         
         # [精准定制] 仅打包斐讯 N1 对应的晶晨芯片架构
         PACKAGE_SOC: s905d
